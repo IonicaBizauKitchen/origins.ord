@@ -1,0 +1,258 @@
+<title>Origins of Ord</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles/index.css">
+<link href='//fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+<script src='scripts/jquery-2.0.1.min.js'></script>
+<script src='scripts/vendor/fastclick.js'></script>
+<script src="scripts/index.js"></script>
+
+<ol id="slides">
+
+  <li class="titular">
+    <h1>Origins of Ord</h1>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        This is a story about the making of <a href="http://ord.zeke.xxx">ord.zeke.xxx</a>,
+        a tool for linguistic inquiry.
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        Everyone knows Wikipedia is a fount of knowledge, but
+        there's more magic than meets the eye.
+      </figcaption>
+    </figure>
+  </li>
+
+
+  <li>
+    <figure>
+      <figcaption>
+        On every Wikipedia article page, the sidebar contains a link to the same article
+        in other languages.
+      </figcaption>
+    </figure>
+  </li>
+
+<!--   <li>
+    <figure>
+        <img src="images/god.png">
+    </figure>
+  </li> -->
+
+  <li>
+    <figure>
+        <img src="images/god-languages.png">
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        Let's open the browser console and play with this data.
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <img src="images/jquery-test.png">
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        Cool, Wikipedia uses jQuery, so we get it for free in the console.
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        Let's get that data!
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <img src="images/jquery-selection.png">
+    </figure>
+  </li>
+
+<!--   <li>
+    <figure>
+        <img src="images/god-console.png">
+    </figure>
+  </li> -->
+
+  <li>
+    <figure>
+        <figcaption>
+          Time to switch from the browser to the editor and build a scraper: <a href="https://github.com/zeke/wikipedia-translator">wikipedia-translator</a>
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          We'll use <a href="https://npmjs.org/package/cheerio">cheerio</a>,
+          a tiny implementation of core jQuery designed specifically for node.
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <img src="images/wikipedia-translator-code.png">
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          Yay! Now we have a standalone scraping module. But something's missing...
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <img src="images/wikipedia-translator-objects.png">
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          Each translation result has a language code, but that's a bit opaque.
+          What the heck language is <a href="http://af.wikipedia.org/wiki/Tuisblad">af</a>?
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          Wikipedia has <a href="http://en.wikipedia.org/wiki/List_of_Wikipedias#List">its own system</a> for codifying langauges, based loosely on other ISO and IETF standards.
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          So let's scrape that HTML table and stick the data in a new node module: <a href="https://github.com/zeke/wikipedias">wikipedias</a>
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <img src="images/wikipedias-object.png">
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          Now we have two node modules that provide all the wikipedia data we need. The next step is to a build a small web app that wraps these modules.
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <img src="images/ord-code.png">
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          ord.zeke.xxx has but a single route and a single view: /
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          Thanks to Express, turning Ord into a JSON webservice is a one-liner.
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <img src="images/bread.png">
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          <a href="http://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein distance</a> between two words is the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other.
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          We can use it to determine how similar (or different) two words are.
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <img src="images/levenshtein.png">
+    </figure>
+  </li>
+
+  <li class="titular">
+    <h1>Takeaways</h1>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          Node makes it easy to build complex projects composed of smaller modules, each with their own set of responsibilities.
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          The web browser has become an aid to the development process, not just the place where you work is visible.
+        </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+        <figcaption>
+          Node is awesome and so can you!
+        </figcaption>
+    </figure>
+  </li>
+
+
+  <li>
+    <figure>
+      <img src="images/unkulunkulu.png">
+    </figure>
+  </li>
+
+</ol>
