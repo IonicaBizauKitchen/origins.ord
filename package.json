@@ -10,8 +10,9 @@
     "start": "node index.js"
   },
   "engines": {
-    "node": "0.10.23"
+    "node": "0.10.x"
   },
+  "repository": "https://github.com/zeke/origins.ord",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-coffee": "~0.7.0",
