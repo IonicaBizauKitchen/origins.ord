@@ -1,6 +1,6 @@
 # Origins of Ord
 
-The creation story of [origins.ord.zeke.xxx](http://origins.ord.zeke.xxx)
+The creation story of [origins.ord.zeke.sikelianos.com](http://origins.ord.zeke.sikelianos.com)
 
 ## Usage
 
