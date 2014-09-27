@@ -5,9 +5,9 @@
 body { font-family: "PT Sans", "Helvetica Neue", helvetica, arial; margin: 0; padding: 0; background: white; color: #777777; }
 
 /* line 43, ../../src/styles/index.sass */
-h1, h2, h3, h4, h5, h6 { font-weight: bold; color: green; }
+  h1, h2, h3, h4, h5, h6 { font-weight: bold; color: darkolivegreen; }
 /* line 46, ../../src/styles/index.sass */
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { text-decoration: none; color: green; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { text-decoration: none; color: darkolivegreen; }
 
 /* line 50, ../../src/styles/index.sass */
 ol#slides { counter-reset: slideNum; margin: 0; padding: 0; list-style: none; }
@@ -24,7 +24,7 @@ ol#slides > li > h1 { position: absolute; top: 50%; left: 50%; -webkit-transform
 /* line 89, ../../src/styles/index.sass */
 ol#slides > li h2 { margin: 0; }
 /* line 92, ../../src/styles/index.sass */
-ol#slides > li.titular { background: green; }
+ol#slides > li.titular { background: darkolivegreen; }
 /* line 94, ../../src/styles/index.sass */
 ol#slides > li.titular > h1 { color: white; }
 /* line 96, ../../src/styles/index.sass */
@@ -52,11 +52,11 @@ ol#slides > li figure figcaption.fullscreen { max-width: 80%; }
 /* line 145, ../../src/styles/index.sass */
 ol#slides > li figure figcaption code { color: black; font-family: Menlo, Monaco, Courier, monospace; font-weight: bold; font-size: 36px; }
 /* line 151, ../../src/styles/index.sass */
-ol#slides > li figure figcaption a { color: green; text-decoration: none; border-bottom: 5px solid green; }
+ol#slides > li figure figcaption a { color: darkolivegreen; text-decoration: none; border-bottom: 5px solid darkolivegreen; }
 @media (max-width: 480px) { /* line 151, ../../src/styles/index.sass */
-  ol#slides > li figure figcaption a { border-bottom: 1px solid green; } }
+  ol#slides > li figure figcaption a { border-bottom: 1px solid darkolivegreen; } }
 /* line 157, ../../src/styles/index.sass */
-ol#slides > li figure figcaption a:hover { color: green; border-bottom-color: green; }
+ol#slides > li figure figcaption a:hover { color: darkolivegreen; border-bottom-color: darkolivegreen; }
 
 /* line 167, ../../src/styles/index.sass */
 #scroll-fever { position: fixed; top: 0; left: 0; width: 0; height: 5px; background: rgba(0, 128, 0, 0.5); }
